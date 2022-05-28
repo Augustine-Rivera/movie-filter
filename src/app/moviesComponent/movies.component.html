@@ -1,0 +1,49 @@
+<div class="mt-5">
+    <h2 class="header" id="careerstats">Filtered Movies</h2>
+    <table class="table table-responsive table-striped success">
+        <tr>
+            <th>Original Title</th>
+            <th *ngIf="showSummary">Overview</th>
+            <th>IMDB ID</th>
+            <th>Popularity</th>
+            <th>Budget</th>
+            <th>Revenue</th>
+            <th>Cast</th>
+            <th>Homepage</th>
+            <th>Director</th>
+            <th>Tagline</th>
+            <th>Keywords</th>
+            <th>Runtime</th>
+            <th>Genres</th>
+            <th>Production Companies</th>
+            <th>Release Date</th>
+            <th>Vote Count</th>
+            <th>Vote Average</th>
+            <th>Release Year</th>
+            <th>Budget Adj</th>
+            <th>Revenue Adj</th>
+        </tr>
+        <tr *ngFor="let movie of movies">
+            <td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
+            <td *ngIf="showSummary">{{movie.overview}}</td>
+            <td>{{movie.imdb_id}}</td>
+            <td>{{movie.popularity}}</td>
+            <td>{{movie.budget}}</td>
+            <td>{{movie.revenue}}</td>
+            <td>{{movie.cast}}</td>
+            <td>{{movie.homepage}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.tagline}}</td>
+            <td>{{movie.keywords}}</td>
+            <td>{{movie.runtime}}</td>
+            <td>{{movie.genres}}</td>
+            <td>{{movie.production_companies}}</td>
+            <td>{{movie.release_date}}</td>
+            <td>{{movie.vote_count}}</td>
+            <td>{{movie.vote_average}}</td>
+            <td>{{movie.release_year}}</td>
+            <td>{{movie.budget_adj}}</td>
+            <td>{{movie.revenue_adj}}</td>
+        </tr>
+    </table>
+  </div>
