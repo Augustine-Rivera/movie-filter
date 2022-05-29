@@ -29,25 +29,24 @@
             <!--<div><td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
                 <td *ngIf="showSummary">{{movie.overview}}</td></div>-->
             <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>
-            <td class="badge" routerLink="/detail/{{movie.imdb_id}}">{{movie.imdb_id}}</td>
-            <td class="popularity" routerLink="/detail/{{movie.popularity}}">{{movie.popularity}}</td>
-            <td class="budget" routerLink="/detail/{{movie.budget}}">{{movie.budget}}</td>
-            <td class="revenue" routerLink="/detail/{{movie.revenue}}">{{movie.revenue}}</td>
-            <td class="cast" routerLink="/detail/{{movie.cast}}">{{movie.cast}}</td>
-            <td class="homepage" routerLink="/detail/{{movie.homepage}}">{{movie.homepage}}</td>
-            <td class="director" routerLink="/detail/{{movie.director}}">{{movie.director}}</td>
-            <td class="tagline" routerLink="/detail/{{movie.tagline}}">{{movie.tagline}}</td>
-            <td class="keywords" routerLink="/detail/{{movie.keywords}}">{{movie.keywords}}</td>
-            <td class="runtime" routerLink="/detail/{{movie.runtime}}">{{movie.runtime}}</td>
-            <td class="genre" routerLink="/detail/{{movie.genres}}">{{movie.genres}}</td>
-            <td class="production-co" routerLink="/detail/{{movie.production_companies}}">{{movie.production_companies}}
-            </td>
-            <td class="release-date" routerLink="/detail/{{movie.release_date}}">{{movie.release_date}}</td>
-            <td class="vote-count" routerLink="/detail/{{movie.vote_count}}">{{movie.vote_count}}</td>
-            <td class="vote-average" routerLink="/detail/{{movie.vote_average}}">{{movie.vote_average}}</td>
-            <td class="release-year" routerLink="/detail/{{movie.release_year}}">{{movie.release_year}}</td>
-            <td class="budge-adj" routerLink="/detail/{{movie.budget_adj}}">{{movie.budget_adj}}</td>
-            <td class="revenue-adj" routerLink="/detail/{{movie.revenue_adj}}">{{movie.revenue_adj}}</td>
+            <td class="badge"> <a routerLink="./mock-movie/Movie/imdb_id"> {{movie.imdb_id}}</a></td>
+            <td class="popularity">{{movie.popularity}}</td>
+            <td class="budget">{{movie.budget}}</td>
+            <td class="revenue">{{movie.revenue}}</td>
+            <td class="cast">{{movie.cast}}</td>
+            <td class="homepage"><a routerLink="./mock-movie/Movie/homepage">{{movie.homepage}}</a></td>
+            <td class="director">{{movie.director}}</td>
+            <td class="tagline">{{movie.tagline}}</td>
+            <td class="keywords">{{movie.keywords}}</td>
+            <td class="runtime">{{movie.runtime}} minutes</td>
+            <td class="genre">{{movie.genres}}</td>
+            <td class="production-co">{{movie.production_companies}}</td>
+            <td class="release-date">{{movie.release_date}}</td>
+            <td class="vote-count">{{movie.vote_count}}</td>
+            <td class="vote-average">{{movie.vote_average}}</td>
+            <td class="release-year">{{movie.release_year}}</td>
+            <td class="budge-adj">{{movie.budget_adj}}</td>
+            <td class="revenue-adj">{{movie.revenue_adj}}</td>
         </tr>
     </table>
 </div>
