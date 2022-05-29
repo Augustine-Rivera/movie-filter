@@ -24,8 +24,9 @@
             <th>Revenue Adj</th>
         </tr>
         <tr *ngFor="let movie of movies">
-            <td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
-            <td *ngIf="showSummary">{{movie.overview}}</td>
+            <!--<div><td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
+            <td *ngIf="showSummary">{{movie.overview}}</td></div>-->
+            <div data-toggle="tooltip" data-placement="bottom"  title="{{movie.overview}}"><td >{{movie.original_title}}</td></div>
             <td>{{movie.imdb_id}}</td>
             <td>{{movie.popularity}}</td>
             <td>{{movie.budget}}</td>
