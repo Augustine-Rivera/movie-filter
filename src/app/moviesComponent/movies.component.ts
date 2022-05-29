@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../movie';
 import { MOVIES } from '../mock-movie';
 
 @Component({
@@ -7,7 +8,6 @@ import { MOVIES } from '../mock-movie';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent{
-
   movies = MOVIES;
   title = 'mouse-hover';
   showSummary: boolean;
@@ -19,5 +19,7 @@ export class MoviesComponent{
   showSunmary(hover: boolean) {
     this.showSummary = hover;
   }
+
+
 
 }
