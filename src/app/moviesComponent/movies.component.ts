@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
-import { MovieService } from '../movie.service';
+import { MOVIES } from '../mock-movie';
 
 @Component({
   selector: 'app-movies',
@@ -8,31 +8,18 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent{
+  movies = MOVIES;
   title = 'mouse-hover';
   showSummary: boolean;
-  selectedMovie?: Movie;
 
-  movies: Movie[]=[];
-
-  constructor(private movieService: MovieService) {
+  constructor() {
     this.showSummary = false;
-  }
-  ngOnInit(): void{
-    this.getMovies();
-  }
-
-  getMovies(): void{
-    this.movieService.getMovies()
-      .subscribe(movies => this.movies = movies);
   }
 
   showSunmary(hover: boolean) {
     this.showSummary = hover;
   }
 
-  onSelect(movie: Movie): void{
-    this.selectedMovie = movie;
-  }
 
 
 }
