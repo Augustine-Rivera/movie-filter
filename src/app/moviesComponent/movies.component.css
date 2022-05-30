@@ -1,42 +1,40 @@
-/* HeroDetailComponent's private CSS styles */
-table {
-    color: #435960;
-    font-weight: bold;
-    border: 2px solid black;
+/* MoviesComponent's private CSS styles */
+.movies {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  
+  table {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
     background-color: lightgrey;
-    border-radius: 20px;
-    margin: auto;
-}
-
-h2{
-    font-weight: bold;
     color: #435960;
-}
-
-tr {
     border: 2px solid black;
-    height: auto;
-    width: auto;
-    margin: auto;
-    text-align: center;
-}
+    border-radius: 20px;
+  }
+  
+  .movies td {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #overview {
+    left: .1em;
+    background-color: white;
+  }
+  
+  .movies a {
+    color: blue;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  } 
 
-button {
-    margin-top: 20px;
-    margin-right: .5rem;
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button:hover {
-    background-color: #cfd8dc;
-}
-
-button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-}
-
+  .title{
+      font-weight: bold;
+  }
