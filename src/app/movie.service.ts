@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Movie } from './movie';
-import { MOVIES } from './mock-movie';
-import { MoviesComponent } from './moviesComponent/movies.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
@@ -32,6 +30,19 @@ export class MovieService {
         catchError(this.handleError<Movie[]>('getMovies', []))
       );
   }
+
+  /*getMovieNo404<Data>(id: number): Observable<Movie>{
+    const url = `${this.moviesUrl}/?id=${id}`;
+    return this.http.get<Hero[]>(url)
+      .pipe{
+        map(movies => movies[0]),
+        tap(m => {
+          const outcome = m ? `fetched` : `did not find`;
+          this.log(`${outcome} hero id = ${id}`);
+        }),
+        catchError(this.handleError<Movie>(`getMovie id=${id}`))
+      };
+  } */
 
   getMovie(id: number): Observable<Movie>{
     const url = '${this.moviesUrl}/${id}';

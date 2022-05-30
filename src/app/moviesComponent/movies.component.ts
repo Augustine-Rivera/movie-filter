@@ -7,12 +7,15 @@ import { MovieService } from '../movie.service';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent{
+export class MoviesComponent implements OnInit{
+  
+  movies: Movie[]=[];
+  
   title = 'mouse-hover';
   showSummary: boolean;
   selectedMovie?: Movie;
 
-  movies: Movie[]=[];
+  
 
   constructor(private movieService: MovieService) {
     this.showSummary = false;
