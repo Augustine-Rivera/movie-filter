@@ -25,14 +25,12 @@
 
         <tr *ngFor="let movie of movies">
             <td class="title" (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
-            <td *ngIf="showSummary">
-                <div id="overview">
-                    {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
+                <div *ngIf="showSummary">
+                    <div id="overview">
+                        {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
+                    </div>
                 </div>
-            </td>
-            <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)"></button>
-            <!--<div><td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
-                <td *ngIf="showSummary">{{movie.overview}}</td></div>-->
+            <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)">Movie Description</button>
             <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>
             <td class="popularity">{{movie.popularity}}</td>
             <td class="budget">{{movie.budget}}</td>
