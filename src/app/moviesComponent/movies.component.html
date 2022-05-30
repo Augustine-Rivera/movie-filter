@@ -30,6 +30,7 @@
                     {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
                 </div>
             </td>
+            <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)"></button>
             <!--<div><td (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
                 <td *ngIf="showSummary">{{movie.overview}}</td></div>-->
             <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>

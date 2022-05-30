@@ -9,6 +9,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,12 @@ import { InMemoryDataService } from './in-memory-data.service';
     FiltersComponent,
     MoviesComponent,
     DashboardComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
