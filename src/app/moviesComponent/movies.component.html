@@ -30,6 +30,7 @@
                         {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
                     </div>
                 </div>
+            <!--TODO fix button to direct to movie description webpage-->
             <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)">Movie Description</button>
             <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>
             <td class="popularity">{{movie.popularity}}</td>
