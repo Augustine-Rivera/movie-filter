@@ -9,12 +9,15 @@ import { MovieSearchComponent } from '../movie-search/movie-search.component';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent{
+export class MoviesComponent implements OnInit{
+  
+  movies: Movie[]=[];
+  
   title = 'mouse-hover';
   showSummary: boolean;
   selectedMovie?: Movie;
 
-  movies: Movie[]=[];
+  
 
   constructor(private movieService: MovieService, private messageService: MessageService) {
     this.showSummary = false;

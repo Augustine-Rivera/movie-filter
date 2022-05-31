@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Movie } from '../movie';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -19,6 +19,7 @@ export class MovieDetailComponent implements OnInit {
     private movieService: MovieService,//gets hero data from remote server and will use to get movie-to-display
     private location: Location //Interacting with browser.
   ) { }
+
 
   ngOnInit(): void {
     this.getMovie();
