@@ -1,3 +1,4 @@
+//Component displaying movies in a table format. Also contains hover feature.
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
@@ -36,6 +37,6 @@ export class MoviesComponent implements OnInit{
   onSelect(movie: Movie): void{
     this.selectedMovie = movie;
   }
-
+  //order of movies should respond based on applied filters. 
 
 }

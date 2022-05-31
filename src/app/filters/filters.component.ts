@@ -1,3 +1,5 @@
+//filters component that includes drop down boxes to select different filters to choose from. Filter by year, actor, genre, revenue and budget
+//filters should be in drop down boxes
 import { Component, OnInit } from '@angular/core';
 
 @Component({

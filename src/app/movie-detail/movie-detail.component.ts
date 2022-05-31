@@ -1,3 +1,4 @@
+//Movie detail component displays brief description, movie title/picture, link to trailer and link to watch movie.
 import { Component, OnInit} from '@angular/core';
 import { Movie } from '../movie';
 import { ActivatedRoute } from '@angular/router';

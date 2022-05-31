@@ -1,3 +1,4 @@
+//dashboard component in charge of displaying top 5 movies
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
