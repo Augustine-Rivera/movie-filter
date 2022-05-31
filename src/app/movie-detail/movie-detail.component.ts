@@ -11,6 +11,7 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
+  //@Input() movie?: Movie;
   movie: Movie | undefined;
 
   constructor(
@@ -22,6 +23,13 @@ export class MovieDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovie();
+  }
+
+  save(): void {
+    if(this.movie) {
+      this.movieService.updateMovie(this.movie)
+      .subscribe(() => this.goBack());
+    }
   }
 
   getMovie(): void{

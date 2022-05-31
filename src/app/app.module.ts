@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
+import { MessagesComponent } from './messages/messages.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+=======
+>>>>>>> main
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { FormsModule } from '@angular/forms';
     MoviesComponent,
     DashboardComponent,
     MovieDetailComponent,
+<<<<<<< HEAD
+    MessagesComponent,
+    MovieSearchComponent,
+=======
     
+>>>>>>> main
   ],
   imports: [
     BrowserModule,
@@ -27,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    )
+    ),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
