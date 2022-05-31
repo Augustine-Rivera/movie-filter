@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import { MessageService } from '../message.service';
+import { MovieSearchComponent } from '../movie-search/movie-search.component';
 
 @Component({
   selector: 'app-movies',
@@ -14,7 +16,7 @@ export class MoviesComponent{
 
   movies: Movie[]=[];
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private messageService: MessageService) {
     this.showSummary = false;
   }
   ngOnInit(): void{
@@ -32,7 +34,9 @@ export class MoviesComponent{
 
   onSelect(movie: Movie): void{
     this.selectedMovie = movie;
+    this.messageService.add('MoviesComponent: Selected movie id=${movie.id}');
   }
+
 
 
 }

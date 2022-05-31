@@ -4,7 +4,8 @@
     <div><span>id: </span>{{movie.id}}</div>
     <div>
       <label for="movie-name">Movie name: </label>
-      <!-- TODO FIX THIS <input id="movie-name" [(ngModel)]="movie.original_title" placeholder="Movie Name"/> -->
+      <input id="movie-name" [(ngModel)]="movie.original_title" placeholder="Movie Name"/> 
     </div>
+    <button type="button" (click)="save()">save</button>
   <button type="button" (click)="goBack()">go back</button>
   </div>
