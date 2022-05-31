@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Movie } from '../movie';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -19,12 +19,13 @@ export class MovieDetailComponent implements OnInit {
     private location: Location //Interacting with browser.
   ) { }
 
+
   ngOnInit(): void {
     this.getMovie();
   }
 
   getMovie(): void{
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.movieService.getMovie(id)
       .subscribe(movie => this.movie = movie);
   }

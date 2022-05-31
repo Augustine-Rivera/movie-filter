@@ -3,8 +3,7 @@
     <table class="table table-responsive table-striped .table-success">
         <tr>
             <th>Original Title</th>
-            <th>Overview</th>
-            <th>IMDB ID</th>
+            <th><br></th>
             <th>Popularity</th>
             <th>Budget</th>
             <th>Revenue</th>
@@ -24,30 +23,33 @@
             <th>Revenue Adj</th>
         </tr>
 
-        <tr class="movies">
-            <td *ngFor= "let movie of movies">
-                <button [class.selected] = "movie === selectedMovie" type="button" (click)="onSelect(movie)">
-                    <span class="name" routerLink="/detail/{{movie.original_title}}">{{movie.original_title}}</span>
-                    <span class="badge" routerLink="/detail/{{movie.imdb_id}}">{{movie.imdb_id}}</span>
-                    <span class="popularity" routerLink="/detail/{{movie.popularity}}">{{movie.popularity}}</span>
-                    <span class="budget" routerLink="/detail/{{movie.budget}}">{{movie.budget}}</span>
-                    <span class="revenue" routerLink="/detail/{{movie.revenue}}">{{movie.revenue}}</span>
-                    <span class="cast" routerLink="/detail/{{movie.cast}}">{{movie.cast}}</span>
-                    <span class="homepage" routerLink="/detail/{{movie.homepage}}">{{movie.homepage}}</span>
-                    <span class="director" routerLink="/detail/{{movie.director}}">{{movie.director}}</span>
-                    <span class="tagline" routerLink="/detail/{{movie.tagline}}">{{movie.tagline}}</span>
-                    <span class="keywords" routerLink="/detail/{{movie.keywords}}">{{movie.keywords}}</span>
-                    <span class="runtime" routerLink="/detail/{{movie.runtime}}">{{movie.runtime}}</span>
-                    <span class="genre" routerLink="/detail/{{movie.genres}}">{{movie.genres}}</span>
-                    <span class="production-co" routerLink="/detail/{{movie.production_companies}}">{{movie.production_companies}}</span>
-                    <span class="release-date" routerLink="/detail/{{movie.release_date}}">{{movie.release_date}}</span>
-                    <span class="vote-count" routerLink="/detail/{{movie.vote_count}}">{{movie.vote_count}}</span>
-                    <span class="vote-average" routerLink="/detail/{{movie.vote_average}}">{{movie.vote_average}}</span>
-                    <span class="release-year" routerLink="/detail/{{movie.release_year}}">{{movie.release_year}}</span>
-                    <span class="budge-adj" routerLink="/detail/{{movie.budget_adj}}">{{movie.budget_adj}}</span>
-                    <span class="revenue-adj" routerLink="/detail/{{movie.revenue_adj}}">{{movie.revenue_adj}}</span>
-                </button>
-            </td>
+        <tr *ngFor="let movie of movies">
+            <td class="title" (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
+                <div *ngIf="showSummary">
+                    <div id="overview">
+                        {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
+                    </div>
+                </div>
+            <!--TODO fix button to direct to movie description webpage-->
+            <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)">Movie Description</button>
+            <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>
+            <td class="popularity">{{movie.popularity}}</td>
+            <td class="budget">{{movie.budget}}</td>
+            <td class="revenue">{{movie.revenue}}</td>
+            <td class="cast">{{movie.cast}}</td>
+            <td class="homepage"><a routerLink="./mock-movie/Movie/homepage">{{movie.homepage}}</a></td>
+            <td class="director">{{movie.director}}</td>
+            <td class="tagline">{{movie.tagline}}</td>
+            <td class="keywords">{{movie.keywords}}</td>
+            <td class="runtime">{{movie.runtime}} minutes</td>
+            <td class="genre">{{movie.genres}}</td>
+            <td class="production-co">{{movie.production_companies}}</td>
+            <td class="release-date">{{movie.release_date}}</td>
+            <td class="vote-count">{{movie.vote_count}}</td>
+            <td class="vote-average">{{movie.vote_average}}</td>
+            <td class="release-year">{{movie.release_year}}</td>
+            <td class="budge-adj">{{movie.budget_adj}}</td>
+            <td class="revenue-adj">{{movie.revenue_adj}}</td>
         </tr>
     </table>
-  </div>
+</div>

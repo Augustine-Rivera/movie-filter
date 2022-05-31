@@ -1,6 +1,6 @@
 <h1>{{title}}</h1>
 <app-filters></app-filters>
-<nav>
+<nav id="tabs">
     <a routerLink= "/dashboard">
         Dashboard
     </a>
@@ -8,5 +8,6 @@
         routerLink turns user clicks into navigations-->
         Movies
     </a>
-</nav> 
+</nav>
+
 <router-outlet></router-outlet><!--placeholder that dynamically changes based on current state-->

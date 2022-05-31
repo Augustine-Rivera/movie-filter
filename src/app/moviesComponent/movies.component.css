@@ -1,0 +1,65 @@
+/* MoviesComponent's private CSS styles */
+.movies {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+table {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  color: #435960;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.movies td {
+  position: relative;
+  cursor: pointer;
+}
+
+#overview {
+  text-align: left;
+  background-color: white;
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  border-radius: 20px;
+  margin: auto;
+  padding: 5px;
+}
+
+.movies a {
+  color: blue;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  margin: auto;
+  padding: 5px;
+}
+
+button {
+  background-color: lightslategray;
+  border: 1px solid black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header{
+  color: white;
+}
