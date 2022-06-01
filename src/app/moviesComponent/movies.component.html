@@ -24,20 +24,20 @@
         </tr>
 
         <tr *ngFor="let movie of movies">
-            <td class="title" (mouseenter)="showSummary=true" (mouseleave)="showSummary=false">{{movie.original_title}}</td>
+            <td class="title" (mouseenter)="showSummary=true" (mouseleave)="showSummary=false"><a routerLink="/detail/{{movie.id}}">{{movie.original_title}}</a></td>
                 <div *ngIf="showSummary">
                     <div id="overview">
                         {{movie.overview}} Movie Id:<em>{{movie.imdb_id}}</em>
                     </div>
                 </div>
             <!--TODO When title is clicked, user should be redirected to movie-detail page with trailer link, movie link and description-->
-            <button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)">Movie Description</button>
+            <!--button [class.selected]="movie === selectedMovie" type="button" (click)="onSelect(movie)">Movie Description</button-->
             <div data-toggle="tooltip" data-placement="bottom" title="{{movie.overview}}"></div>
             <td class="popularity">{{movie.popularity}}</td>
             <td class="budget">{{movie.budget}}</td>
             <td class="revenue">{{movie.revenue}}</td>
             <td class="cast">{{movie.cast}}</td>
-            <td class="homepage"><a routerLink="./mock-movie/Movie/homepage">{{movie.homepage}}</a></td>
+            <td class="homepage"><a href="detail/{{movie.homepage}}">{{movie.homepage}}</a></td>
             <td class="director">{{movie.director}}</td>
             <td class="tagline">{{movie.tagline}}</td>
             <td class="keywords">{{movie.keywords}}</td>
