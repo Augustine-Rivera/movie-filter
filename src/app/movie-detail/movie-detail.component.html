@@ -3,8 +3,6 @@
   <h2>{{movie.original_title | uppercase}} Details</h2>
   <div><span>id: {{movie.imdb_id}} </span>{{movie.overview}}</div>
   <div>
-    <label for="movie-name">Movie name: </label>
-    <input id="movie-name" [(ngModel)]="movie.original_title" placeholder="Movie Name" />
     <span><a href="https://www.imdb.com/trailers/">Trailer</a></span>
     <span><a href="https://www.vudu.com/">Watch here!</a></span>
   </div>

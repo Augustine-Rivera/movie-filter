@@ -1,6 +1,6 @@
 /* DashboardComponent's private CSS styles */
 
-h2 {
+h2, h4{
     text-align: center;
     color: white;
   }

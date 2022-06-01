@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
@@ -11,16 +12,20 @@ import { MovieService } from '../movie.service';
 export class MoviesComponent implements OnInit{
   
   movies: Movie[]=[];
-  
+
+  website = '';
   title = 'mouse-hover';
   showSummary: boolean;
   selectedMovie?: Movie;
 
-  
-
   constructor(private movieService: MovieService) {
     this.showSummary = false;
   }
+
+  /*TODO: fix this. getWebsite(route: ActivatedRoute){
+    this.website = this.route.snapshot.params.homepage;
+  }*/
+
   ngOnInit(): void{
     this.getMovies();
   }
@@ -34,9 +39,7 @@ export class MoviesComponent implements OnInit{
     this.showSummary = hover;
   }
 
-  onSelect(movie: Movie): void{
-    this.selectedMovie = movie;
-  }
+  
   //order of movies should respond based on applied filters. 
 
 }
